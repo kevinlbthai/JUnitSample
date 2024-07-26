@@ -9,6 +9,7 @@ jobs:
         pom-location: D:\IntelliJ_Java_Project\JUnitSample
     runs-on: Windows-Server-2022-Small
     enable-dependency-cache: true
+    parallelism: 2
   Job2:
     name: Execute Test and Collect Test Result in Surefire Reporting
     runs-on: Windows-Server-2022-Small
