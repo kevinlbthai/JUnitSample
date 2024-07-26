@@ -1,0 +1,22 @@
+name: JUnitSample
+jobs:
+  Job1:
+    name: Maven:Build Clean
+    steps:
+      - type: maven
+        goals: clean
+        working-directory: D:\IntelliJ_Java_Project\JUnitSample
+        pom-location: D:\IntelliJ_Java_Project\JUnitSample
+    runs-on: Windows-Server-2022-Small
+    enable-dependency-cache: true
+  Job2:
+    name: Execute Test and Collect Test Result in Surefire Reporting
+    runs-on: Linux-Medium
+    steps:
+      - type: maven
+        working-directory: D:\IntelliJ_Java_Project\JUnitSample
+        goals: surefire-report:report
+        pom-location: D:\IntelliJ_Java_Project\JUnitSample
+    dependencies:
+      - Job1
+    enable-dependency-cache: true
