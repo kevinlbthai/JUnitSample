@@ -11,7 +11,7 @@ jobs:
     enable-dependency-cache: true
   Job2:
     name: Execute Test and Collect Test Result in Surefire Reporting
-    runs-on: Linux-Medium
+    runs-on: Windows-Server-2022-Small
     steps:
       - type: maven
         working-directory: D:\IntelliJ_Java_Project\JUnitSample
