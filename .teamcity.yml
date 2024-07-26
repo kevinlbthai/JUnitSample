@@ -21,3 +21,4 @@ jobs:
     dependencies:
       - Job1
     enable-dependency-cache: true
+    parallelism: 2
